@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIO Roleplay</title>
+    <link rel="icon" type="image/x-icon" href="/src/assets/img/rio_logo.png">
+</head>
+
+<body>
+    <div class="navbar">
+        <img class="logo" src="../src/assets/img/nav-logo.png" alt="Logo RIO Roleplay">
+
+        <a class="active nav" href="">Ínicio</a>
+        <a class="nav" href="https://">Comunidade</a>
+        <a class="nav" href="https://">Configuração</a>
+
+        <div class="user-container">
+            <div id="toggle-notify" class="notify">
+                <img class="sino1" src="../src/assets/img/sino.png">
+            </div>
+            <div id="notificacoes" class="notify-content notify-content-close">
+                <div class="header-notify">
+                    <h1>
+                        <img class="sino2" src="../src/assets/img/sino.png">
+                        Notificações
+                    </h1>
+                </div>
+
+                <div class="pop-notify">
+                    <!-- O ID: FIRST É APENAS PARA DAR UM ESPAÇO EM! (ELE NÃO DEVE SER INCLUIDO NOS OUTROS H3's)-->
+                    <h3 id="first" href="#">Whitelist aprovada!
+                        <label id="date">14/02/23</label>
+                        <p>Parabéns você foi aprovado na whitelist do servidor, agora você podera entrar e divirta-se
+                        </p>
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div class="user-text">
+                <h3>GNxd</h3>
+                <p>Level: <label id="level">10</label></p>
+            </div>
+            <img class="avatar" src="../src/assets/img/user-icon.png" alt="Foto do usúario">
+        </div>
+    </div>
+
+    <div id="open" class="whitelist">
+        <p>Ainda não fez sua whitelist? Faça agora e divirta-se</p>
+        <a href="https://mta-rioroleplay.com/whitelist"><input class="wl" type="button" value="Fazer Whitelist"></a>
+        <img id="toggle-wl" src="../src/assets/img/close.png" alt="" srcset="">
+    </div>
+
+    <!--CONTEÚDO PRINCIPAL DESSA PORRA-->
+
+    <body>
+        <div class="principal-container">
+            <!-- LADO ESQUERDO DA PÁGINA -->
+            <div class="left">
+                <h2 class="title-container">Últimas Notícias</h2>
+                <div class="ultimas-noticias">
+                    <ul>
+                        <li class="posts">
+                            <span class="autor">
+                                RIO Roleplay
+                                <img id="verified" src="/src/assets/img/verified.png">
+                                <label class="date-post">14/02/23 11:56 PM</label>
+                            </span>
+                            <br>
+                            <p class="description-post">Batemos a marca de 1k... <br><br> <i>Obrigado a todos que estão
+                                    apoiando, e acreditando no projeto RIO.</i></p>
+                            <img class="img-post" src="/src/assets/img/rio-1k.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- LADO DIREITO DA PÁGINA -->
+            <div class="right">
+                <h2 class="title-container2">Entrar no servidor</h2>
+                <a href="mtasa://188.191.97.59:22003"><canvas width="340" height="141" id="button1"></canvas></a>
+                <div class="att-post"></div>
+                <ul>
+                    <li class="att">
+                        <h4>ATUALIZAÇÕES</h4>
+                        <p class="att-content">RIO - 2023<br><br>Estamos de volta!<br><br>No dia 16/08/2022, iniciamos o RIO Roleplay V1, infelizmente, tivemos que encerrá-lo após apenas 4/5 dias devido a problemas técnicos. Mas, desistir nunca esteve em nossos planos.<br><br>Aprendemos com nossos erros e nos tornamos mais fortes.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+
+    <script src="./assets/js/bundle.js"></script>
+</body>
+
+</html>

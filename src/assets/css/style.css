@@ -1,0 +1,509 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFPRODISPLAYMEDIUM.OTF');
+}
+
+@font-face {
+    font-family: 'SF Pro Display Bold';
+    src: url('../fonts/SFPRODISPLAYBOLD.OTF');
+}
+
+@font-face {
+    font-family: 'SF Pro Display Regular';
+    src: url('../fonts/SFPRODISPLAYREGULAR.OTF');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #151515;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.navbar {
+    max-height: 73px;
+    background-color: #1b1b1b;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    overflow: hidden;
+}
+
+.navbar .avatar,
+.logo {
+    float: left;
+    margin-left: 20px;
+    margin-right: 74px;
+    user-select: none;
+}
+
+.navbar .nav {
+    color: #fff;
+    float: left;
+    opacity: 60%;
+    font-family: 'SF Pro Display', sans-serif;
+    padding-left: 31px;
+    margin-top: 27px;
+    transition: opacity 500ms;
+}
+
+.navbar a:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.navbar a.active {
+    opacity: 100%;
+}
+
+.navbar a.active:hover {
+    opacity: 100%;
+    cursor: default;
+}
+
+.user-container {
+    display: flex;
+    justify-content: end;
+}
+
+.user-container .user-text h3 {
+    margin-top: 10px;
+}
+
+.navbar .user-container {
+    margin-top: 12px;
+    margin-right: 39px;
+}
+
+.navbar .user-container img.avatar {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.navbar .user-container .user-text h3 {
+    font-family: 'SF Pro Display Regular', sans-serif;
+    text-align: center;
+    font-size: 17px;
+}
+
+/* ABA WHITELIST */
+
+.whitelist {
+    display: flex;
+    background-color: #987F59;
+    width: 100%;
+    height: 54px;
+    justify-content: center;
+}
+
+.whitelist img {
+    transform: translateX(400px);
+    width: 23px;
+    height: 22px;
+    margin-top: 15px;
+}
+
+.whitelist img:hover {
+    cursor: pointer
+}
+
+.whitelist p {
+    margin: 15px;
+}
+
+a .wl:hover {
+    cursor: pointer;
+}
+
+.wl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 150px;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    background-color: transparent;
+    border: 2px solid white;
+    margin-top: 8px;
+    font-size: 14px;
+    transition: background 500ms;
+}
+
+.wl:hover {
+    background-color: white;
+    color: #000;
+}
+
+.user-text {
+    flex-direction: column;
+}
+
+.user-text p {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 11px;
+}
+
+/* NOTIFICAÇÕES */
+
+.notify {
+    background-color: #1F1F1F;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #232323;
+    border-radius: 6px;
+    transition: opacity 500ms;
+}
+
+.notify:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.user-container .notify {
+    margin-top: 7px;
+    margin-right: 15px;
+}
+
+.notify img {
+    user-select: none;
+    margin: auto;
+    transform: translateY(10px) translateX(12px);
+    width: 18px;
+    height: 21px;
+}
+
+#level {
+    padding-left: 2px;
+}
+
+.notify-content {
+    user-select: none;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 72px;
+    left: 970px;
+    padding-bottom: 20px;
+    background-color: #1F1F1F;
+    min-width: 368px;
+    min-height: 331px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 0px 0px 6px 6px;
+    animation: dropdown 500ms ease-in-out;
+}
+
+.pop-notify {
+    max-height: 331px;
+    overflow: auto;
+}
+
+.pop-notify::-webkit-scrollbar {
+    width: 2px;
+    background-color: #353535;
+    position: absolute;
+}
+
+.pop-notify::-webkit-scrollbar-thumb {
+    background-color: #A19157;
+}
+
+@keyframes dropdown {
+    0% {
+        transform: translateY(-1%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.notify-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.notify-content #first {
+    margin-top: 15px;
+}
+
+.notify-content h3:hover {
+    background-color: rgba(217, 217, 217, 0.01);
+    cursor: pointer;
+}
+
+
+.notify-content h1 {
+    text-align: end;
+    font-size: 15px;
+    font-family: 'SF Pro Display Regular', sans-serif;
+}
+
+#date {
+    font-size: 10px;
+}
+
+.sino {
+    width: 20px;
+    height: 22px;
+}
+
+.header-notify {
+    background-color: #2E2E2E;
+    position: relative;
+    padding: 14px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-notify h1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-notify h1 img {
+    margin-right: 15px;
+}
+
+#notificacoes h3 {
+    padding: 10px;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+#notificacoes label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#notificacoes h3 p {
+    font-size: 10px;
+    color: rgba(179, 179, 179, 0.8);
+    max-width: 226px;
+}
+
+.pop {
+    cursor: pointer;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+}
+
+.home-content {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+@media (max-width: 896px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content {
+        margin-top: 80px;
+    }
+}
+
+/* CONTEÚDO PRINCIPAL ABAIXO */
+
+
+.principal-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.ultimas-noticias h2::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 2px;
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.left {
+    padding: 20px;
+}
+
+.right {
+    padding: 20px;
+    margin-left: 400px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.title-container {
+    padding-bottom: 20px;
+}
+
+.ultimas-noticias {
+    max-width: 500px;
+    min-height: 600px;
+    max-height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.autor {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.ultimas-noticias::-webkit-scrollbar {
+    width: 2px;
+    height: 50px;
+    background-color: #353535;
+    position: absolute;
+}
+
+.ultimas-noticias::-webkit-scrollbar-thumb {
+    background-color: #A19157;
+}
+
+.img-post {
+    max-width: 300px;
+    max-height: 300px;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.img-post:hover {
+    cursor: pointer;
+}
+
+.date-post {
+    font-size: 12px;
+    color: #6b6b6b;
+    margin-left: 5px;
+}
+
+.description-post {
+    padding-bottom: 20px;
+    font-size: 13px;
+    max-width: 500px;
+}
+
+.posts:hover {
+    background-color: rgba(217, 217, 217, 0.01);
+    border-radius: 5px 5px;
+}
+
+.imagem-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+  }
+  
+.imagem-preview .img-preview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#verified {
+    width: 19px;
+    height: 19px;
+    margin-left: 5px;
+}
+
+.title-container::after {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 1.5px;
+    margin-left: 10px;
+    vertical-align: middle;
+    background-color: #fff; /* altere a cor de fundo conforme desejar */
+}
+
+.title-container2::before {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 1.5px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background-color: #fff; /* altere a cor de fundo conforme desejar */
+}
+
+canvas {
+    margin-top: 10px;
+}
+
+.att-post {
+    width: 340px;
+    height: 141px;
+    border-radius: 5px;
+    background-image: url(/src/assets/img/att.png);
+}
+
+.att-content {
+    color: #C1C1C1;
+    margin-top: 10px;
+    max-width: 330px;
+    max-height: 141px;
+    overflow: auto;
+
+}
+
+.att-content::-webkit-scrollbar {
+    width: 2px;
+    height: 50px;
+    background-color: #353535;
+    position: absolute;
+}
+
+.att-content::-webkit-scrollbar-thumb {
+    background-color: #A19157;
+}
